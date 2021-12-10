@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.visi-misi-size{
+  font-size:261.983px;
+}
+
+.visi-misi-stroke{
+  color: rgba(255, 177, 31, 0.1);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
