@@ -1,5 +1,9 @@
 import './App.css';
 import landingImage from "./images/landing.png";
+import checklistImage from "./images/checklist.png";
+import locationImage from "./images/location.png";
+import moneyImage from "./images/money.png";
+import bookImage from "./images/book.png";
 import Header from "./components/Header";
 
 function App() {
@@ -54,7 +58,74 @@ function App() {
       </div>
 
       <div className="mt-36 px-30">
-        test
+        <div className="text-center font-bold font-raleway text-4xl">
+          Kenapa Harus TK PGRI 05?
+        </div>
+        <div className="flex justify-center">
+          <p className="text-center font-light text-lg tracking-wider w-1/2 mt-3">
+            Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
+          </p>
+        </div>
+
+        <div className="px-28 grid grid-cols-4 grid-flow-col gap-5 content-center text-center mt-4">
+          <div className="bg-green-200 bg-opacity-30 rounded-3xl pb-10">
+            <div className="flex justify-center">
+              <img src={checklistImage} className="" alt="" />
+            </div>
+            <div>
+              <p className="font-bold font-raleway text-2xl mb-1">
+                Fasilitas Lengkap
+              </p>
+              <div className="flex justify-center">
+                <p className="w-4/6 text-xs">
+                  Dapat dijangkau melalui jalan dan jalur manapun.
+                </p>
+              </div>
+            </div>
+          </div> 
+
+          <div className="bg-yellow-400 bg-opacity-30 rounded-3xl pb-10">
+            <div className="flex justify-center">
+              <img src={locationImage} className="" alt="" />
+            </div>
+            <p className="font-bold font-raleway text-2xl mb-1">
+              Kemudahan Akses
+            </p>
+            <div className="flex justify-center">
+                <p className="w-4/6 text-xs">
+                  Dapat dijangkau melalui jalan dan jalur manapun.
+                </p>
+              </div>
+          </div>
+
+          <div className="bg-green-200 bg-opacity-30 rounded-3xl pb-10">
+            <div className="flex justify-center">
+              <img src={moneyImage} className="" alt="" />
+            </div>
+            <p className="font-bold font-raleway text-2xl mb-1">
+              Biaya Terjangkau
+            </p>
+            <div className="flex justify-center">
+              <p className="w-4/6 text-xs">
+                Dapat dijangkau melalui jalan dan jalur manapun.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-yellow-400 bg-opacity-30 rounded-3xl pb-10">
+            <div className="flex justify-center">
+              <img src={bookImage} className="" alt="" />
+            </div>
+            <p className="font-bold font-raleway text-2xl mb-1">
+              Kurikulum Unggul
+            </p>
+            <div className="flex justify-center">
+              <p className="w-4/6 text-xs">
+                Dapat dijangkau melalui jalan dan jalur manapun.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
