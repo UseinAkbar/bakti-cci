@@ -4,6 +4,8 @@ import checklistImage from "./images/checklist.png";
 import locationImage from "./images/location.png";
 import moneyImage from "./images/money.png";
 import bookImage from "./images/book.png";
+import kepsekImage from "./images/kepsek.png";
+import paperImage from "./images/paper.png";
 import Header from "./components/Header";
 
 function App() {
@@ -62,7 +64,7 @@ function App() {
           Kenapa Harus TK PGRI 05?
         </div>
         <div className="flex justify-center">
-          <p className="text-center font-light text-lg tracking-wider w-1/2 mt-3">
+          <p className="text-center font-light text-lg tracking-wider w-1/2 mt-3 font-nunito">
             Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
           </p>
         </div>
@@ -77,7 +79,7 @@ function App() {
                 Fasilitas Lengkap
               </p>
               <div className="flex justify-center">
-                <p className="w-4/6 text-xs">
+                <p className="w-4/6 text-xs font-nunito">
                   Dapat dijangkau melalui jalan dan jalur manapun.
                 </p>
               </div>
@@ -92,7 +94,7 @@ function App() {
               Kemudahan Akses
             </p>
             <div className="flex justify-center">
-                <p className="w-4/6 text-xs">
+                <p className="w-4/6 text-xs font-nunito">
                   Dapat dijangkau melalui jalan dan jalur manapun.
                 </p>
               </div>
@@ -106,7 +108,7 @@ function App() {
               Biaya Terjangkau
             </p>
             <div className="flex justify-center">
-              <p className="w-4/6 text-xs">
+              <p className="w-4/6 text-xs font-nunito">
                 Dapat dijangkau melalui jalan dan jalur manapun.
               </p>
             </div>
@@ -120,13 +122,80 @@ function App() {
               Kurikulum Unggul
             </p>
             <div className="flex justify-center">
-              <p className="w-4/6 text-xs">
+              <p className="w-4/6 text-xs font-nunito">
                 Dapat dijangkau melalui jalan dan jalur manapun.
               </p>
             </div>
           </div>
         </div>
       </div>
+
+      <div className="mt-36">
+        <div className="flex justify-center">
+          <div className="w-1/2 flex justify-center">
+            <img src={kepsekImage} width="488" height="732" alt="" />
+          </div>
+          <div className="w-1/2">
+            <div className="flex items-center justify-center min-h-full">
+              <div className="mt-80 space-y-3">
+                <p className="font-bold text-xl text-gray-600 font-raleway">Prakata</p>
+                <p className="text-5xl font-bold font-raleway">Kepala Sekolah</p>
+                <p className="font-nunito text-xl font-light mt-3 w-9/12">
+                Berangkat dari keprihatinan melihat anak-anak usia 4-6 tahun berkumpul tanpa aktivitas pembelajaran, hingga membuat kelompok belajar TK PGRI 05
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-20">
+        <div className="flex justify-center">
+          <div className="w-1/2">
+            <div className="flex items-center justify-center min-h-full">
+              <div className="mt-56 space-y-3">
+                <p className="font-bold text-xl text-gray-600 font-raleway">Rangkaian</p>
+                <p className="text-5xl font-bold font-raleway">Tujuan Sekolah</p>
+                <p className="font-nunito text-xl font-light mt-3 w-9/12">
+                Tujuan Pendidikan Lembaga adalah menjadikan anak usia dini mengembangkan potensinya untuk memiliki kekuatan spiritual keagamaan, pengendalian diri, kepribadian, kecerdasan , berakhlak mulia, ketrampilan yang berguna untuk masyarakat, bangsa dan Negara. 
+            
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/2 flex justify-center">
+            <img src={paperImage} width="488" height="732" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-36">
+        <div className="flex justify-center">
+          <div className="w-5/6 text-center">
+            <h1 className="font-raleway text-5xl font-bold">Galeri Foto Aktivasi Siswa</h1>
+            <div className="text-center flex justify-center">
+              <p className="w-5/12 font-nunito mt-2 font-light">
+                Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-36">
+        <div className="flex justify-center">
+          <div className="w-5/6 text-center">
+            <h1 className="font-raleway text-5xl font-bold">Prestasi Sekolah</h1>
+            <div className="text-center flex justify-center">
+              <p className="w-5/12 font-nunito mt-2 font-light">
+              Expedita voluptatibus assumenda iusto eum cumque beatae sunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   );
 }
