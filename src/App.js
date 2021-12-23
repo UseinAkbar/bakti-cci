@@ -6,6 +6,11 @@ import moneyImage from "./images/money.png";
 import bookImage from "./images/book.png";
 import kepsekImage from "./images/kepsek.png";
 import paperImage from "./images/paper.png";
+import post1Image from "./images/post/1.png";
+import post2Image from "./images/post/2.png";
+import post3Image from "./images/post/3.png";
+import post4Image from "./images/post/4.png";
+import post5Image from "./images/post/5.png";
 import Header from "./components/Header";
 
 function App() {
@@ -183,18 +188,51 @@ function App() {
       </div>
 
       <div className="mt-36">
-        <div className="flex justify-center">
-          <div className="w-5/6 text-center">
+        <div className="flex justify-center ">
+          <div className="w-5/6 text-center ">
             <h1 className="font-raleway text-5xl font-bold">Prestasi Sekolah</h1>
             <div className="text-center flex justify-center">
               <p className="w-5/12 font-nunito mt-2 font-light">
               Expedita voluptatibus assumenda iusto eum cumque beatae sunt.
               </p>
             </div>
+
+            <div className="grid grid-cols-3 gap-1 place-items-center bg-yellow-700 bg-opacity-20 rounded p-6 mt-5">
+              <div className="row-span-2" >
+                <img src={post1Image} alt="" />
+              </div>
+              <div>
+                <img src={post2Image} alt="" />
+              </div>
+              <div className="w-full h-full">
+                <img src={post4Image} alt="" />
+              </div>
+              <div>
+                <img src={post3Image} alt="" />
+              </div>
+              <div className="w-full h-full">
+                <img src={post5Image} width="494" height="242" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
+      <div className="mt-36">
+        <div className="bg-yellow-500 py-2"></div>
+        <div className="bg-green-300">
+          <div className="px-12 py-12">
+            <div className="w-1/2">
+              <h1 className="font-poppins text-2xl font-bold">
+              TK PGRI 05 TEGALAMPEL
+              </h1>
+              <p className="font-poppins mt-2 w-8/12">
+              Desa Mandiro RT 17 RW 06 Kec. Tegalampel, Bondowoso, Jawa Timur 68291
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   );
