@@ -1,22 +1,21 @@
-import './Home.css';
-import landingImage from "./images/landing.png";
-import checklistImage from "./images/checklist.png";
-import locationImage from "./images/location.png";
-import moneyImage from "./images/money.png";
-import bookImage from "./images/book.png";
-import kepsekImage from "./images/kepsek.png";
-import paperImage from "./images/paper.png";
-import post1Image from "./images/post/1.png";
-import post2Image from "./images/post/2.png";
-import post3Image from "./images/post/3.png";
-import post4Image from "./images/post/4.png";
-import post5Image from "./images/post/5.png";
-import Header from "./components/Header";
+import React from 'react';
+import '../Home.css';
+import landingImage from "../images/landing.png";
+import checklistImage from "../images/checklist.png";
+import locationImage from "../images/location.png";
+import moneyImage from "../images/money.png";
+import bookImage from "../images/book.png";
+import kepsekImage from "../images/kepsek.png";
+import paperImage from "../images/paper.png";
+import post1Image from "../images/post/1.png";
+import post2Image from "../images/post/2.png";
+import post3Image from "../images/post/3.png";
+import post4Image from "../images/post/4.png";
+import post5Image from "../images/post/5.png";
 
 const Home = () => {
   return (
     <div className="bg-yellow-200 font-nunito">
-      <Header/>
       <div className="flex justify-between px-14 mt-24">
         <div className="w-3/6 self-center mr-5">
           <p className="font-bold text-5xl w-5/6 font-raleway">Pendidikan Dasar Terbaik di Daerahnya</p>
@@ -64,7 +63,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-36 px-30">
+      <div className="mt-36 px-30" id="beranda">
         <div className="text-center font-bold font-raleway text-4xl">
           Kenapa Harus TK PGRI 05?
         </div>
