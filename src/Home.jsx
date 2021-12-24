@@ -1,4 +1,4 @@
-import './App.css';
+import './Home.css';
 import landingImage from "./images/landing.png";
 import checklistImage from "./images/checklist.png";
 import locationImage from "./images/location.png";
@@ -13,7 +13,7 @@ import post4Image from "./images/post/4.png";
 import post5Image from "./images/post/5.png";
 import Header from "./components/Header";
 
-function App() {
+const Home = () => {
   return (
     <div className="bg-yellow-200 font-nunito">
       <Header/>
@@ -238,4 +238,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
