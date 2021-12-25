@@ -186,7 +186,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-36">
+      <div className="py-36">
         <div className="flex justify-center ">
           <div className="w-5/6 text-center ">
             <h1 className="font-raleway text-5xl font-bold">Prestasi Sekolah</h1>
@@ -217,21 +217,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-36">
-        <div className="bg-yellow-500 py-2"></div>
-        <div className="bg-green-300">
-          <div className="px-12 py-12">
-            <div className="w-1/2">
-              <h1 className="font-poppins text-2xl font-bold">
-              TK PGRI 05 TEGALAMPEL
-              </h1>
-              <p className="font-poppins mt-2 w-8/12">
-              Desa Mandiro RT 17 RW 06 Kec. Tegalampel, Bondowoso, Jawa Timur 68291
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
     </div>
   );

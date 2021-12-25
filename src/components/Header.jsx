@@ -11,7 +11,7 @@ const Header = () => {
               <a href='/#beranda'>Beranda 2</a>
               <a href='/aboutUs'>Tentang Kami</a>
               <a href="#">Kurikulum</a>
-              <a href="#">Hubungi Kami</a>
+              <a href="/hubungi-kami">Hubungi Kami</a>
             </ul>
           </div>
         </header>
