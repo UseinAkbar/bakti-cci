@@ -16,7 +16,7 @@ import post5Image from "../images/post/5.png";
 const Home = () => {
   return (
     <div className="bg-yellow-200 font-nunito">
-      <div className="flex justify-between px-14 mt-24">
+      <div className="flex justify-between px-14 pt-24">
         <div className="w-3/6 self-center mr-5">
           <p className="font-bold text-5xl w-5/6 font-raleway">Pendidikan Dasar Terbaik di Daerahnya</p>
           <p className="mt-3 font-light text-lg w-4/6 tracking-wider leading-relaxed">
