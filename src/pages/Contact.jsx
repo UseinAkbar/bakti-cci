@@ -1,6 +1,52 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
+import emailjs from 'emailjs-com';
+
+const renderAlert = () => {
+    return(
+        <div className="px-4 py-3 rounded-md mb-6 leading-normal text-center bg-green-100 text-green-700">
+            <p>Pesan telah berhasil di kirim</p>
+        </div>
+    )
+} 
 
 const Contact = () => {
+    const [values, setValues] = useState({
+        name: "",
+        email: "",
+        message: "",
+    })
+    const [status, setStatus] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        emailjs.send("service_s2i0n2b", "template_wap49vj", values, "user_gZ8njf5qVtng0Zct91Nd5")
+            .then(res => {
+                console.log("success", res);
+                setValues({
+                    name: '',
+                    email: '',
+                    message: '',
+                });
+                setStatus('SUCCESS');
+            }, error => {
+                console.log("Failed...", error);
+            });
+    }
+
+    useEffect(() => {
+        if(status === "SUCCESS"){
+            setTimeout(() => {
+                setStatus('');
+            }, 3000);
+        }
+    }, [status])
+
+    const handleChange = (e) => {
+        setValues(values => ({
+            ...values,
+            [e.target.name]:  e.target.value
+        }))
+    }
     return (
         <div>
 
@@ -30,22 +76,23 @@ const Contact = () => {
                 </div>
                 <div className="w-1/2 m-auto bg-white p-6 rounded-xl">
                     <div>
-                        <form action="" method="post">
+                        {status && renderAlert()}
+                        <form onSubmit={handleSubmit}>
                             <div className="space-y-3 mb-5">
                                 <label className="font-raleway font-bold text-xl">Nama Anda</label>
-                                <input className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan nama Anda disini" />
+                                <input name="name" value={values.name} onChange={handleChange} className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan nama Anda disini" />
                             </div>
                             <div className="space-y-3 mb-5">
                                 <label className="font-raleway font-bold text-xl">Email Anda</label>
-                                <input className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan email Anda disini" />
+                                <input name="email" value={values.email} onChange={handleChange} className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan email Anda disini" />
                             </div>
                             <div className="space-y-3 mb-5">
-                                <label className="font-raleway font-bold text-xl">Kritik dan Saran Anda</label>
-                                <textarea 
-                                    className="font-nunito w-full border-2 border-yellow-300 rounded p-2 max-h-64" placeholder="Tulis kritik dan saran Anda terhadap pelayanan kami disini" rows="4" cols="50">
-
+                                <label className="font-raleway font-bold text-xl">Kritik dan Masukan Anda</label>
+                                <textarea name="message"
+                                    value={values.message} onChange={handleChange} className="font-nunito w-full border-2 border-yellow-300 rounded p-2 max-h-64" placeholder="Tulis kritik dan saran Anda terhadap pelayanan kami disini" rows={4} cols={50} >
                                 </textarea>
                             </div>
+                            <button className="bg-yellow-500 w-full p-3 font-bold font-raleway rounded-md">KIRIM</button>
                         </form>
                     </div>
                 </div>
@@ -53,6 +100,10 @@ const Contact = () => {
 
         </div>
     );
+
+    
 }
+
+
 
 export default Contact;
