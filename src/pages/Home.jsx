@@ -1,5 +1,6 @@
 import React from 'react';
-import '../Home.css';
+import Gallery from '../components/Gallery';
+import '../css/Home.css';
 import landingImage from "../images/landing.png";
 import checklistImage from "../images/checklist.png";
 import locationImage from "../images/location.png";
@@ -15,7 +16,7 @@ import post5Image from "../images/post/5.png";
 
 const Home = () => {
   return (
-    <div className="bg-yellow-200 font-nunito">
+    <div className="home font-nunito">
       <div className="flex justify-between px-14 pt-24">
         <div className="w-3/6 self-center mr-5">
           <p className="font-bold text-5xl w-5/6 font-raleway">Pendidikan Dasar Terbaik di Daerahnya</p>
@@ -177,10 +178,13 @@ const Home = () => {
         <div className="flex justify-center">
           <div className="w-5/6 text-center">
             <h1 className="font-raleway text-5xl font-bold">Galeri Foto Aktivasi Siswa</h1>
-            <div className="text-center flex justify-center">
-              <p className="w-5/12 font-nunito mt-2 font-light">
+            <div className="galeri">
+              <p className="font-nunito mt-5 font-light">
                 Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
               </p>
+              <div className="galeri__box">
+                <Gallery />
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,55 @@
+.galeri__carousel .swiper-button-prev, 
+.galeri__carousel .swiper-button-next {
+    color: #fff !important;
+    -webkit-tap-highlight-color: transparent;
+    opacity: .7;
+    transition: .15s ease;
+}
+
+.galeri__carousel .swiper-button-prev:hover, 
+.galeri__carousel .swiper-button-next:hover {
+    opacity: 1;
+}
+
+.galeri__carousel .swiper-button-prev {
+    transform: translateX(10px);
+}
+
+.galeri__carousel .swiper-button-next {
+    transform: translateX(-10px);
+}
+
+.galeri__carousel .swiper-button-prev::before, 
+.galeri__carousel .swiper-button-next::before {
+    opacity: .7;
+}
+
+.galeri__carousel .swiper-button-prev:hover::before, 
+.galeri__carousel .swiper-button-next:hover::before {
+    opacity: 1;
+}
+
+.galeri__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 40px;
+    margin-top: 1.25rem;
+    box-shadow: inset 0px -4px 20px rgba(233, 216, 166, 0.2), inset 0px 4px 20px rgba(233, 216, 166, 0.2);
+    border-radius: 30px;
+}
+
+.galeri__imgBox {
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.galeri__img {
+    filter: grayscale(.5);
+    transition: .2s ease;
+}
+
+.galeri__imgBox:hover .galeri__img {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
