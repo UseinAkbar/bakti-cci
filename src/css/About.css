@@ -1,0 +1,126 @@
+.swiper-button-prev, 
+.swiper-button-next {
+    color: #fff !important;
+    -webkit-tap-highlight-color: transparent;
+    opacity: 1;
+    transition: .15s ease;
+}
+
+.about__carousel .swiper-button-prev {
+    left: 78%;
+    top: 82%;
+}
+
+.about__carousel .swiper-button-next {
+    right: 8%;
+    top: 82%;
+}
+
+.about__carousel .swiper-button-prev::before, 
+.about__carousel .swiper-button-next::before {
+    opacity: 1;
+}
+
+.about__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about__profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 35vw;
+    grid-gap: 4rem;
+    padding: 6rem 3rem 2rem;
+}
+
+.pengajar {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgba(139, 231, 200, .4);
+    padding: 5rem 0 2rem;
+}
+
+.pengajar__heading {
+    transform: translateY(20px);
+}
+
+.pengajar__container {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    transform: translateY(50%);
+}
+
+.pengajar__box {
+    display: grid;
+    grid-template-columns: max-content;
+    border-radius: 20px;
+    z-index: 1;
+    transition: .15s ease;
+}
+
+.pengajar__box:hover {
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+.pengajar__container:hover .pengajar__box:not(:hover) {
+    transform: scale(1);
+}
+
+.pengajar__box-1, .pengajar__box-3 {
+    background-color: #9DF9DA;
+}
+
+.pengajar__box-2 {
+    background-color: #FFD947;
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.pengajar__img {
+    width: 250px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.pengajar__detail {
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    color: #FFFFEA;
+    padding: 12px 20px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-auto-rows: min-content;
+    grid-gap: 10px;
+    border-radius: 0 0 20px 20px;
+    z-index: 2;
+}
+
+.pengajar__box:nth-child(3) .pengajar__detail {
+    justify-content: end;
+    justify-items: end;
+}
+
+.pengajar__nama {
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pengajar__jabatan {
+    font-family: 'Nunito';
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.sejarah {
+    padding: 0 0 4rem;
+    margin-top: 14rem;
+}

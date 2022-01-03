@@ -50,7 +50,7 @@ const Contact = () => {
     return (
         <div>
 
-            <div className="h-screen bg-yellow-100 flex justify-center px-10">
+            <div className="contact h-screen flex justify-center px-10">
                 <div className="w-1/2 m-auto space-y-4">
                     <h1 className="font-raleway font-bold text-4xl">Saran & Masukan</h1>
                     <p className="font-nunito font-light w-7/12">Berikan kata-kata atau masukan Anda terhadap platform pendidikan yang sedang kami bangun.</p>
@@ -80,11 +80,11 @@ const Contact = () => {
                         <form onSubmit={handleSubmit}>
                             <div className="space-y-3 mb-5">
                                 <label className="font-raleway font-bold text-xl">Nama Anda</label>
-                                <input name="name" value={values.name} onChange={handleChange} className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan nama Anda disini" />
+                                <input name="name" autoComplete="off" value={values.name} onChange={handleChange} className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan nama Anda disini" />
                             </div>
                             <div className="space-y-3 mb-5">
                                 <label className="font-raleway font-bold text-xl">Email Anda</label>
-                                <input name="email" value={values.email} onChange={handleChange} className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan email Anda disini" />
+                                <input name="email" autoComplete="off" value={values.email} onChange={handleChange} className="font-nunito w-full border-2 border-yellow-300 rounded p-2" placeholder="Masukkan email Anda disini" />
                             </div>
                             <div className="space-y-3 mb-5">
                                 <label className="font-raleway font-bold text-xl">Kritik dan Masukan Anda</label>

@@ -1,14 +1,16 @@
 import React from "react";
+import { dataPengajar } from "../data";
+import '../css/About.css';
+import ProfileCarousel from "../components/ProfileCarousel";
 
 const About = () => {
+
     return (
         <div className="about">
-           <div className="bg-yellow-100">
-               <div className="flex justify-center py-24">
-                    <div className="w-1/2">
-
-                    </div>
-                    <div className="w-1/2">
+           <div>
+               <div className="about__profile">
+                    <ProfileCarousel />
+                    <div className="">
                         <h1 className="font-raleway font-bold text-4xl">Profil Sekolah</h1>
                         <table className="font-nunito font-light mt-4 table-border -ml-2">
                             <tr>
@@ -51,16 +53,30 @@ const About = () => {
                </div>
            </div>
 
-           <div className="py-24 bg-green-200">
-             <div className="flex justify-center">
-                <div className="w-5/12 text-center">
-                    <h1 className="font-raleway font-bold text-4xl">Tenaga Pengajar</h1>
-                    <p className="font-nunito font-light mt-2 tracking-wide leading-6">Taman Kanak Kanak ini memilliki tenaga pengajar yang sangat baik serta dikelola dengan keorganisasian yang jelas serta terstruktur yang tentunya hal ini berdampak baik bagi keberlangsungan instansi.</p>
+           <div className="pengajar">
+                <div className="flex justify-center pengajar__heading">
+                    <div className="w-5/12 text-center">
+                        <h1 className="font-raleway font-bold text-4xl">Tenaga Pengajar</h1>
+                        <p className="font-nunito font-light mt-2 tracking-wide leading-6">Taman Kanak Kanak ini memilliki tenaga pengajar yang sangat baik serta dikelola dengan keorganisasian yang jelas serta terstruktur yang tentunya hal ini berdampak baik bagi keberlangsungan instansi.</p>
+                    </div>
                 </div>
-             </div>
+                <div className="pengajar__container">
+                    {dataPengajar.map((item, i) => {
+                        const {srcImg, nama, jabatan} = item
+                        return (
+                            <div className={`pengajar__box pengajar__box-${i+1}`} key={i}>
+                                <img src={srcImg} alt={jabatan} className="pengajar__img" />
+                                <div className="pengajar__detail">
+                                    <h2 className="pengajar__nama">{nama}</h2>
+                                    <p className="pengajar__jabatan">{jabatan}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
            </div>
 
-           <div className="py-24 bg-yellow-100">
+           <div className="sejarah">
                 <div className="flex justify-center">
                     <div className="w-11/12">
                         <h1 className="font-raleway font-bold text-4xl">Sejarah & Background</h1>
