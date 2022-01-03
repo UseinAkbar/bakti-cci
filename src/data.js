@@ -63,12 +63,12 @@ const dataPengajar = [
     },
     {
         srcImg: kepalaSekolah,
-        nama: 'Arkan Maharani',
+        nama: 'Esty Susantina',
         jabatan: 'Kepala Sekolah'
     },
     {
         srcImg: sekretaris,
-        nama: 'Siti Maharani',
+        nama: 'Dwice Heni Ananda',
         jabatan: 'Sekretaris'
     }
 ]
