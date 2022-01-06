@@ -1,5 +1,10 @@
 .galeri {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 3px solid #ffb11f;
 }

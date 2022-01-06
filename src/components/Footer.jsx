@@ -1,8 +1,10 @@
 import React from "react";
+import E3 from "../images/E3.png";
 
 const Footer = () => {
     return(
-      <div>
+      <div className="relative">
+          <img src={E3} className="absolute right-0 bottom-0" alt="" />
         <div className="bg-yellow-500 py-2"></div>
         <div className="bg-green-300">
           <div className="px-12 py-12">

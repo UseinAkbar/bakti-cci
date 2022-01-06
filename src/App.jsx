@@ -14,7 +14,7 @@ const App = () => {
                 <Header />
                 <Routes>
                     <Route path='/' element={<Home />} exact />
-                    <Route path='/aboutUs' element={<About />} />
+                    <Route path='/tentang-kami' element={<About />} />
                     <Route path='/hubungi-kami' element={<Contact />} />
                 </Routes>
                 <Footer/>

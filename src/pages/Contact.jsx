@@ -1,5 +1,7 @@
 import React, { useEffect,useState } from "react";
 import emailjs from 'emailjs-com';
+import E6 from "../images/E6.png";
+import E7 from "../images/E7.png";
 
 const renderAlert = () => {
     return(
@@ -50,6 +52,9 @@ const Contact = () => {
     return (
         <div>
 
+            <img src={E6}  className="absolute bottom-0 z-0 -mb-20" alt="" />
+            <img src={E7}  className="absolute right-0 top-0" alt="" style={{zIndex:-1}} />
+    
             <div className="contact h-screen flex justify-center px-10">
                 <div className="w-1/2 m-auto space-y-4">
                     <h1 className="font-raleway font-bold text-4xl">Saran & Masukan</h1>

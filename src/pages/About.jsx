@@ -2,7 +2,8 @@ import React from "react";
 import { dataPengajar } from "../data";
 import '../css/About.css';
 import ProfileCarousel from "../components/ProfileCarousel";
-
+import E4 from "../images/E4.png";
+import E5 from "../images/E5.png";
 const About = () => {
 
     return (
@@ -61,6 +62,8 @@ const About = () => {
                     </div>
                 </div>
                 <div className="pengajar__container">
+                <img src={E4}  className="absolute -mt-32" alt="" />
+                <img src={E5}  className="absolute -mt-32 right-0" alt="" />
                     {dataPengajar.map((item, i) => {
                         const {srcImg, nama, jabatan} = item
                         return (

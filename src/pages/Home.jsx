@@ -13,11 +13,15 @@ import post2Image from "../images/post/2.png";
 import post3Image from "../images/post/3.png";
 import post4Image from "../images/post/4.png";
 import post5Image from "../images/post/5.png";
+import E1 from "../images/E1.png";
+import E2 from "../images/E2.png";
+// import B1 from "../images/B1.png";
 
 const Home = () => {
   return (
     <div className="home font-nunito">
-      <div className="flex justify-between px-14 pt-24">
+      {/* <img src={B1}  className="absolute" alt=""  /> */}
+      <div className="flex justify-between px-14 pt-24" style={{zIndex:10}}>
         <div className="w-3/6 self-center mr-5">
           <p className="font-bold text-5xl w-5/6 font-raleway">Pendidikan Dasar Terbaik di Daerahnya</p>
           <p className="mt-3 font-light text-lg w-4/6 tracking-wider leading-relaxed">
@@ -30,6 +34,8 @@ const Home = () => {
       </div>
 
       <div className="mt-36 px-30">
+        <img src={E1}  className="absolute pt-10" alt="" />
+        <img src={E2}  className="absolute right-0 -mt-32" alt="" />
         <div className="flex justify-around">
             <p className="absolute left-0 text-9xl font-bold font-raleway leading-3 visi-misi-size visi-misi-stroke z-0 select-none">
               Visi
@@ -219,8 +225,8 @@ const Home = () => {
             </div>
           </div>
         </div>
+      
       </div>
-
       
 
     </div>
