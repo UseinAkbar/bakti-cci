@@ -10,9 +10,6 @@ import dummmy4 from './images/galeri_1.png'
 import profil1 from './images/profil_1.png'
 import profil2 from './images/profil_2.png'
 import profil3 from './images/profil_3.png'
-import profilDetail1 from './images/profilDetail_1.png'
-import profilDetail2 from './images/profilDetail_2.png'
-import profilDetail3 from './images/profilDetail_3.png'
 
 import kepalaSekolah from './images/kplSekolah.png';
 import bendahara from './images/bendahara.png';
@@ -25,15 +22,14 @@ class DataGaleri {
         this.id = id
         this.srcGaleri = srcGaleri
         this.title = 'Kegiatan Belajar Mengajar'
-        this.subTitle = 'Kegiatan Belajar Mengajar yang intensif, dengan mengunakan tenaga pengajar yang baik.'
+        this.desc = 'Kegiatan Belajar Mengajar yang intensif, dengan mengunakan tenaga pengajar yang baik.'
     }
 }
 
 class ProfileSekolah {
-    constructor(id, srcProfil, srcProfilDetail, desc) {
+    constructor(id, srcProfil, desc) {
         this.id = id
         this.srcProfil = srcProfil
-        this.srcProfilDetail = srcProfilDetail
         this.desc = desc
     }
 }
@@ -50,26 +46,62 @@ const galeri = [
 ]
 
 const profile = [
-    new ProfileSekolah(uniqueID(), profil1, profilDetail1, 'Foto tampak samping sekolah'),
-    new ProfileSekolah(uniqueID(), profil2, profilDetail2, 'Foto tampak depan sekolah'),
-    new ProfileSekolah(uniqueID(), profil3, profilDetail3, 'Foto tampak belakang sekolah')
+    new ProfileSekolah(uniqueID(), profil1, 'Foto tampak samping sekolah'),
+    new ProfileSekolah(uniqueID(), profil2, 'Foto tampak depan sekolah'),
+    new ProfileSekolah(uniqueID(), profil3, 'Foto tampak belakang sekolah')
 ]
 
 const dataPengajar = [
     {
         srcImg: bendahara,
         nama: 'Fera Maharani',
-        jabatan: 'Bendahara'
+        jabatan: 'Bendahara',
+        riwayat: [
+            {
+                tahun: 2012,
+                gelar: 'menjadi guru terbaik',
+                deskripsi: 'Aut ut suscipit similique voluptate quibusdam.'
+            },
+            {
+                tahun: 2015,
+                gelar: 'nominasi guru favorit',
+                deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
+            }
+        ]
     },
     {
         srcImg: kepalaSekolah,
         nama: 'Esty Susantina',
-        jabatan: 'Kepala Sekolah'
+        jabatan: 'Kepala Sekolah',
+        riwayat: [
+            {
+                tahun: 2012,
+                gelar: 'menjadi guru terbaik',
+                deskripsi: 'Aut ut suscipit similique voluptate quibusdam.'
+            },
+            {
+                tahun: 2015,
+                gelar: 'nominasi guru favorit',
+                deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
+            }
+        ]
     },
     {
         srcImg: sekretaris,
         nama: 'Dwice Heni Ananda',
-        jabatan: 'Sekretaris'
+        jabatan: 'Sekretaris',
+        riwayat: [
+            {
+                tahun: 2012,
+                gelar: 'menjadi guru terbaik',
+                deskripsi: 'Aut ut suscipit similique voluptate quibusdam.'
+            },
+            {
+                tahun: 2015,
+                gelar: 'nominasi guru favorit',
+                deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
+            }
+        ]
     }
 ]
 

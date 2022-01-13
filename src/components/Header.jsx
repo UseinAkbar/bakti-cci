@@ -7,10 +7,10 @@ const Header = () => {
           <a href="/" className="font-bold font-poppins">TK PGRI 05 TEGALAMPEL</a>
           <div>
             <ul className="flex space-x-8">
-              <NavLink to='/' activeClassName="active" className="font-nunito" exact>Beranda</NavLink>
-              <NavLink to='/tentang-kami' activeClassName="active" className="font-nunito" exact>Tentang Kami</NavLink>
-              <NavLink to='/kurikulum' activeClassName="active" className="font-nunito" exact>Kurikulum</NavLink>
-              <NavLink to='/hubungi-kami' activeClassName="active" className="font-nunito" exact>Hubungi Kami</NavLink>
+              <NavLink to='/' activeClassName="active" className="header__link font-nunito" exact>Beranda</NavLink>
+              <NavLink to='/tentang-kami' activeClassName="active" className="header__link font-nunito" exact>Tentang Kami</NavLink>
+              <NavLink to='/kurikulum' activeClassName="active" className="header__link font-nunito" exact>Kurikulum</NavLink>
+              <NavLink to='/hubungi-kami' activeClassName="active" className="header__link font-nunito" exact>Hubungi Kami</NavLink>
             </ul>
           </div>
         </header>
