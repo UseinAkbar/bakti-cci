@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { dataPengajar } from "../data";
 import '../css/About.css';
 import ProfileCarousel from "../components/ProfileCarousel";
+import PengajarPopUp from "../components/PengajarPopUp";
 import E4 from "../images/E4.png";
 import E5 from "../images/E5.png";
+
 const About = () => {
+    const [riwayatGuru, setRiwayatGuru] = useState({
+        cardImg: '',
+        cardNama: '',
+        cardJabatan: '',
+        cardRiwayat: []
+    })
+    const [isPopUp, setPopUp] = useState(false)
+    const [isFlip, setFlip] = useState(false)
+
+    const flipCard = () => {
+        setFlip(!isFlip)
+    }
+
+    const handleDataFlip = (cardImg, cardNama, cardJabatan, cardRiwayat) => {
+        setRiwayatGuru({
+            cardImg,
+            cardNama,
+            cardJabatan,
+            cardRiwayat
+        })
+        setPopUp(!isPopUp)
+    }
+
+    const handleClose = () => {
+        setPopUp(!isPopUp)
+        setTimeout(() => setFlip(false), 300)
+        setTimeout(() => setRiwayatGuru({
+            cardImg: '',
+            cardNama: '',
+            cardJabatan: '',
+            cardRiwayat: []
+        }), 400)
+    }
 
     return (
         <div className="about">
@@ -62,12 +97,12 @@ const About = () => {
                     </div>
                 </div>
                 <div className="pengajar__container">
-                <img src={E4}  className="absolute -mt-32" alt="" />
-                <img src={E5}  className="absolute -mt-32 right-0" alt="" />
+                    <img src={E4}  className="absolute -mt-32" alt="" />
+                    <img src={E5}  className="absolute -mt-32 right-0" alt="" />
                     {dataPengajar.map((item, i) => {
-                        const {srcImg, nama, jabatan} = item
+                        const {srcImg, nama, jabatan, riwayat} = item
                         return (
-                            <div className={`pengajar__box pengajar__box-${i+1}`} key={i}>
+                            <div className={`pengajar__box pengajar__box-${i+1}`} key={i} onClick={() => handleDataFlip(srcImg, nama, jabatan, riwayat)}>
                                 <img src={srcImg} alt={jabatan} className="pengajar__img" />
                                 <div className="pengajar__detail">
                                     <h2 className="pengajar__nama">{nama}</h2>
@@ -77,6 +112,14 @@ const About = () => {
                         )
                     })}
                 </div>
+                <PengajarPopUp 
+                    riwayatGuru={riwayatGuru}
+                    flipCard={flipCard}
+                    isFlip={isFlip}
+                    isPopUp={isPopUp}
+                    handleClose={handleClose}
+                />
+                <div className={`pengajar__overlay ${isPopUp && 'popUpPengajarOverlay'}`} ></div>
            </div>
 
            <div className="sejarah">

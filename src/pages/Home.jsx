@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Gallery from '../components/Gallery';
+import GaleriPopUp from '../components/GaleriPopUp';
 import '../css/Home.css';
 import landingImage from "../images/landing.png";
 import checklistImage from "../images/checklist.png";
@@ -18,6 +19,31 @@ import E2 from "../images/E2.png";
 // import B1 from "../images/B1.png";
 
 const Home = () => {
+  const [isPopUp, setPopUp] = useState(false)
+  const [imgPopUp, setImgPopUp] = useState('')
+  const [titlePopUp, setTitlePopUp] = useState('')
+  const [descPopUp, setDescPopUp] = useState('')
+  const [isDisplayDetail, setDisplayDetail] = useState(false)
+
+    const handleDetail = () => {
+        setDisplayDetail(!isDisplayDetail)
+    }
+
+  const handlePopUp = (srcImg, title, desc) => {
+    setPopUp(!isPopUp)
+    setImgPopUp(srcImg)
+    setTitlePopUp(title)
+    setDescPopUp(desc)
+  }
+
+  const handleClose = () => {
+    setDisplayDetail(false)
+    setPopUp(!isPopUp)
+    setTimeout(() => setImgPopUp(''), 400)
+    setTitlePopUp('')
+    setDescPopUp('')
+  }
+
   return (
     <div className="home font-nunito">
       {/* <img src={B1}  className="absolute" alt=""  /> */}
@@ -189,7 +215,17 @@ const Home = () => {
                 Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
               </p>
               <div className="galeri__box">
-                <Gallery />
+                <Gallery handlePopUp={handlePopUp} />
+                <GaleriPopUp 
+                  isPopUp={isPopUp} 
+                  imgPopUp={imgPopUp} 
+                  titlePopUp={titlePopUp} 
+                  descPopUp={descPopUp} 
+                  isDisplayDetail={isDisplayDetail}
+                  handleDetail={handleDetail}
+                  handleClose={handleClose} 
+                />
+                <div className={`overlay ${isPopUp && 'popUpOverlay'}`} onClick={handleClose}></div>
               </div>
             </div>
           </div>

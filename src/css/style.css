@@ -2,6 +2,11 @@
     --swiper-navigation-size: 30px !important;
 }
 
+.active {
+    font-weight: bold;
+    border-bottom: 3px solid #ffb11f;
+  }
+
 .home {
     background: #FFFFEA;
 }

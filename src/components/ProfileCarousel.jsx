@@ -17,10 +17,15 @@ const ProfileCarousel = () => {
             className="about__carousel"
         >
             {profile.map(item => {
-                const {id, srcProfil, srcProfilDetail, desc} = item
+                const {id, srcProfil, desc} = item
                 return (
-                    <SwiperSlide>
-                        <img src={srcProfil} className="about__img" alt={desc}/>
+                    <SwiperSlide key={id}>
+                        <div className="about__imgBox">
+                            <img src={srcProfil} className="about__img" alt={desc}/>
+                            <div className="about__descBox">
+                                <p className="about__desc">{desc}</p>
+                            </div>
+                        </div>
                     </SwiperSlide>
                 )
             })}
