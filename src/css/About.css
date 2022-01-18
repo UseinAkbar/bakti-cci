@@ -68,6 +68,7 @@
     grid-template-rows: 35vw;
     grid-gap: 4rem;
     padding: 6rem 3rem 2rem;
+    position: relative;
 }
 
 .pengajar {
@@ -75,6 +76,7 @@
     grid-template-columns: 1fr;
     background-color: rgba(139, 231, 200, .4);
     padding: 5rem 0 2rem;
+    position: relative;
 }
 
 .pengajar__heading {
@@ -86,6 +88,7 @@
     grid-template-columns: repeat(3, max-content);
     justify-content: center;
     transform: translateY(50%);
+    z-index: 2;
 }
 
 .pengajar__box {
@@ -164,5 +167,11 @@
 
 .sejarah {
     padding: 0 0 4rem;
-    margin-top: 14rem;
+    margin-top: 18rem;
+    position: relative;
+}
+
+.sejarah__content {
+    position: relative;
+    z-index: 2;
 }

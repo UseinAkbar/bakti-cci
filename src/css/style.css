@@ -40,3 +40,121 @@
 .swiper-slide {
     width: 100%;
 }
+
+/* Blur Effect */
+
+.section__intro,
+.section__visi,
+.section__features,
+.section__prakata {
+  position: relative;
+}
+
+.section__intro {
+  z-index: 9;
+}
+
+.intro__heading,
+.intro__img {
+  z-index: 2;
+}
+
+.blur {
+  position: absolute;
+  width: 60%;
+  z-index: 1;
+}
+
+.blur__intro--1 {
+  top: 0;
+  right: 0;
+}
+
+.blur__intro--2 {
+  top: 5%;
+  left: 0;
+}
+
+.blur__visi {
+  top: -250%;
+  left: 0;
+}
+
+.visi-misi-stroke {
+  z-index: 2;
+}
+
+.leaf {
+  z-index: 3;
+}
+
+.features__heading,
+.features__subheading,
+.features__content {
+  position: relative;
+  z-index: 2;
+}
+
+.blur__features--1 {
+  top: -100%;
+  right: 0;
+}
+
+.blur__features--2 {
+  bottom: -100%;
+  right: 0;
+}
+
+.prakata__img {
+  z-index: 2;
+}
+
+.blur__prakata--1 {
+  top: -100%;
+  left: 0;
+}
+
+.blur__prakata--2 {
+  bottom: -50%;
+  left: 0;
+}
+
+.blur__profile--1 {
+    top: 20%;
+    left: 0;
+}
+
+.blur__profile--2 {
+    top: 0;
+    right: 0;
+}
+
+.profile__table {
+    z-index: 2;
+}
+
+.blur__pengajar {
+    bottom: -100%;
+    right: 0;
+}
+
+.blur__sejarah--1,
+.blur__sejarah--2,
+.blur__sejarah--3 {
+  height: 100%;
+}
+
+.blur__sejarah--1 {
+  bottom: -20%;
+  left: 0;
+}
+
+.blur__sejarah--2 {
+  top: -30%;
+  left: 0;
+}
+
+.blur__sejarah--3 {
+  top: -10%;
+  right: 0;
+}

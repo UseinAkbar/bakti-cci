@@ -3,6 +3,12 @@ import { dataPengajar } from "../data";
 import '../css/About.css';
 import ProfileCarousel from "../components/ProfileCarousel";
 import PengajarPopUp from "../components/PengajarPopUp";
+import ellipse1 from "../images/Ellipse1.png";
+import ellipse2 from "../images/Ellipse2.png";
+import ellipse4 from "../images/Ellipse4.png";
+import ellipse5 from "../images/Ellipse5.png";
+import ellipse6 from "../images/Ellipse6.png";
+import ellipse7 from "../images/Ellipse7.png";
 import E4 from "../images/E4.png";
 import E5 from "../images/E5.png";
 
@@ -45,8 +51,11 @@ const About = () => {
         <div className="about">
            <div>
                <div className="about__profile">
+                   <img src={ellipse2} alt="" className="blur blur__profile blur__profile--1" />
+                   <img src={ellipse1} alt="" className="blur blur__profile blur__profile--2" />
+
                     <ProfileCarousel />
-                    <div className="">
+                    <div className="profile__table">
                         <h1 className="font-raleway font-bold text-4xl">Profil Sekolah</h1>
                         <table className="font-nunito font-light mt-4 table-border -ml-2">
                             <tr>
@@ -90,6 +99,7 @@ const About = () => {
            </div>
 
            <div className="pengajar">
+                <img src={ellipse4} alt="" className="blur blur__pengajar" />
                 <div className="flex justify-center pengajar__heading">
                     <div className="w-5/12 text-center">
                         <h1 className="font-raleway font-bold text-4xl">Tenaga Pengajar</h1>
@@ -123,7 +133,10 @@ const About = () => {
            </div>
 
            <div className="sejarah">
-                <div className="flex justify-center">
+                <img src={ellipse5} alt="" className="blur blur__sejarah blur__sejarah--1" />
+                <img src={ellipse6} alt="" className="blur blur__sejarah blur__sejarah--2" />
+                <img src={ellipse7} alt="" className="blur blur__sejarah blur__sejarah--3" />
+                <div className="flex justify-center sejarah__content">
                     <div className="w-11/12">
                         <h1 className="font-raleway font-bold text-4xl">Sejarah & Background</h1>
                         <div className="mt-5 space-y-6">
