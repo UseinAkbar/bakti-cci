@@ -14,6 +14,13 @@ import post2Image from "../images/post/2.png";
 import post3Image from "../images/post/3.png";
 import post4Image from "../images/post/4.png";
 import post5Image from "../images/post/5.png";
+import ellipse1 from "../images/Ellipse1.png";
+import ellipse2 from "../images/Ellipse2.png";
+import ellipse3 from "../images/Ellipse3.png";
+import ellipse4 from "../images/Ellipse4.png";
+import ellipse5 from "../images/Ellipse5.png";
+import ellipse6 from "../images/Ellipse6.png";
+import ellipse7 from "../images/Ellipse7.png";
 import E1 from "../images/E1.png";
 import E2 from "../images/E2.png";
 // import B1 from "../images/B1.png";
@@ -47,21 +54,24 @@ const Home = () => {
   return (
     <div className="home font-nunito">
       {/* <img src={B1}  className="absolute" alt=""  /> */}
-      <div className="flex justify-between px-14 pt-24" style={{zIndex:10}}>
-        <div className="w-3/6 self-center mr-5">
+      <div className="flex justify-between px-14 pt-24 section__intro">
+        <img src={ellipse2} alt="blur" className="blur blur__intro blur__intro--2" />
+        <img src={ellipse1} alt="blur" className="blur blur__intro blur__intro--1" />
+        <div className="w-3/6 self-center mr-5 intro__heading">
           <p className="font-bold text-5xl w-5/6 font-raleway">Pendidikan Dasar Terbaik di Daerahnya</p>
           <p className="mt-3 font-light text-lg w-4/6 tracking-wider leading-relaxed">
             Mengembangkan potensi anak untuk memiliki kekuatan spiritual keagamaan, pengendalian diri, kepribadian, kecerdasan, berakhlak mulia, ketrampilan yang berguna untuk masyarakat, bangsa dan negara.
           </p>
         </div>
-        <div className="">
+        <div className="intro__img">
           <img src={landingImage} className="" alt="" />
         </div>
       </div>
 
-      <div className="mt-36 px-30">
-        <img src={E1}  className="absolute pt-10" alt="" />
-        <img src={E2}  className="absolute right-0 -mt-32" alt="" />
+      <div className="mt-36 px-30 section__visi">
+        <img src={ellipse3} alt="" className="blur blur__visi" />
+        <img src={E1}  className="absolute pt-10 leaf" alt="" />
+        <img src={E2}  className="absolute right-0 -mt-32 leaf" alt="" />
         <div className="flex justify-around">
             <p className="absolute left-0 text-9xl font-bold font-raleway leading-3 visi-misi-size visi-misi-stroke z-0 select-none">
               Visi
@@ -96,17 +106,20 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-36 px-30" id="beranda">
-        <div className="text-center font-bold font-raleway text-4xl">
+      <div className="mt-36 px-30 section__features" id="beranda">
+        <img src={ellipse4} alt="" className="blur blur__features blur__features--1" />
+        <img src={ellipse7} alt="" className="blur blur__features blur__features--2" />
+
+        <div className="text-center font-bold font-raleway text-4xl features__heading">
           Kenapa Harus TK PGRI 05?
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center features__subheading">
           <p className="text-center font-light text-lg tracking-wider w-1/2 mt-3 font-nunito">
             Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
           </p>
         </div>
 
-        <div className="px-28 grid grid-cols-4 grid-flow-col gap-5 content-center text-center mt-4">
+        <div className="px-28 grid grid-cols-4 grid-flow-col gap-5 content-center text-center mt-4 features__content">
           <div className="bg-green-200 bg-opacity-30 rounded-3xl pb-10">
             <div className="flex justify-center">
               <img src={checklistImage} className="" alt="" />
@@ -167,9 +180,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-36">
+      <div className="mt-36 section__prakata">
+        <img src={ellipse6} alt="" className="blur blur__prakata blur__prakata--1" />
+        <img src={ellipse5} alt="" className="blur blur__prakata blur__prakata--2" />
         <div className="flex justify-center">
-          <div className="w-1/2 flex justify-center">
+          <div className="w-1/2 flex justify-center prakata__img">
             <img src={kepsekImage} width="488" height="732" alt="" />
           </div>
           <div className="w-1/2">
