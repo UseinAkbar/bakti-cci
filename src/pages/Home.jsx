@@ -222,7 +222,7 @@ const Home = () => {
       <div className="mt-36">
         <div className="flex justify-center">
           <div className="w-5/6 text-center">
-            <h1 className="font-raleway text-5xl font-bold">Galeri Foto Aktivasi Siswa</h1>
+            <h1 className="font-raleway text-5xl font-bold">Galeri Foto Aktivitas Siswa</h1>
             <div className="galeri">
               <p className="font-nunito mt-5 font-light">
                 Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
