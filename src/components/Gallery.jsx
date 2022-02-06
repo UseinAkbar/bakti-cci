@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/Galeri.css'
-import { galeri } from "../data";
+import { galeriAktivitas } from "../data";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,16 +17,17 @@ const Gallery = ({handlePopUp}) => {
             navigation
             spaceBetween={10}
             slidesPerView={4}
-            // autoplay={{delay: 1800, disableOnInteraction: false}}
+            freeMode={true}
+            autoplay={{delay: 1900, disableOnInteraction: false}}
             loop
             className="galeri__carousel"
         >
-            {galeri.map(item => {
-                const {id, srcGaleri, title, desc} = item
+            {galeriAktivitas.map(item => {
+                const {id, thumbnail, srcGaleri, title, desc} = item
                 return (
                     <SwiperSlide key={id}>
                         <div className="galeri__imgBox" onClick={() => handlePopUp(srcGaleri, title, desc)}>
-                            <img src={srcGaleri} className="galeri__img" alt="Foto Aktivitas Murid TK 05 TegalAmpel"/>
+                            <img src={thumbnail} className="galeri__img" alt="Foto Aktivitas Murid TK 05 TegalAmpel"/>
                         </div>
                     </SwiperSlide>
                 )
