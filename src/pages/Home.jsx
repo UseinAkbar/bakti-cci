@@ -27,18 +27,19 @@ import E2 from "../images/E2.png";
 
 const Home = () => {
   const [isPopUp, setPopUp] = useState(false)
-  const [imgPopUp, setImgPopUp] = useState('')
+  const [imgPopUp, setImgPopUp] = useState([])
   const [titlePopUp, setTitlePopUp] = useState('')
   const [descPopUp, setDescPopUp] = useState('')
   const [isDisplayDetail, setDisplayDetail] = useState(false)
 
-    const handleDetail = () => {
-        setDisplayDetail(!isDisplayDetail)
-    }
+  const handleDetail = () => {
+    setDisplayDetail(!isDisplayDetail)
+  }
 
-  const handlePopUp = (srcImg, title, desc) => {
+  const handlePopUp = (arrGaleri, title, desc) => {
+    console.log(arrGaleri);
     setPopUp(!isPopUp)
-    setImgPopUp(srcImg)
+    setImgPopUp(arrGaleri)
     setTitlePopUp(title)
     setDescPopUp(desc)
   }
@@ -46,9 +47,6 @@ const Home = () => {
   const handleClose = () => {
     setDisplayDetail(false)
     setPopUp(!isPopUp)
-    setTimeout(() => setImgPopUp(''), 400)
-    setTitlePopUp('')
-    setDescPopUp('')
   }
 
   return (
@@ -72,14 +70,14 @@ const Home = () => {
         <img src={ellipse3} alt="" className="blur blur__visi" />
         <img src={E1}  className="absolute pt-10 leaf" alt="" />
         <img src={E2}  className="absolute right-0 -mt-32 leaf" alt="" />
-        <div className="flex justify-around">
+        <div className="flex justify-around section__visi-box">
             <p className="absolute left-0 text-9xl font-bold font-raleway leading-3 visi-misi-size visi-misi-stroke z-0 select-none">
               Visi
             </p>
             <p className="absolute right-2 text-9xl font-bold font-raleway leading-3 visi-misi-size visi-misi-stroke z-0 select-none">
               Misi
             </p>
-          <div className="flex justify-center border-r-2 border-yellow-600 z-10">
+          <div className="flex justify-center border-r-2 border-yellow-600">
             <div className="w-1/2">
               <p className="font-bold text-4xl mb-3 font-raleway">Visi</p>
               <p className="font-light text-lg tracking-wider leading-relaxed">
@@ -224,7 +222,7 @@ const Home = () => {
       <div className="mt-36">
         <div className="flex justify-center">
           <div className="w-5/6 text-center">
-            <h1 className="font-raleway text-5xl font-bold">Galeri Foto Aktivasi Siswa</h1>
+            <h1 className="font-raleway text-5xl font-bold">Galeri Foto Aktivitas Siswa</h1>
             <div className="galeri">
               <p className="font-nunito mt-5 font-light">
                 Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 

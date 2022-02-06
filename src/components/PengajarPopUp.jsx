@@ -12,7 +12,7 @@ const PengajarPopUp = ({riwayatGuru, flipCard, isFlip, isPopUp, handleClose}) =>
             <div className="layer-close" onClick={handleClose}></div>
 
             <div className="card">
-                <div className={`card__side card__side--front ${isFlip && 'displayFront'}`}>
+                <div className={`card__side card__side--front ${isFlip && 'hideFront'}`}>
                     <div className="card__iconBox card__iconBox-info" onClick={flipCard}>
                         <svg className='card__icon card__icon-info'>
                             <use xlinkHref={`${icon}#icon-info`}></use>

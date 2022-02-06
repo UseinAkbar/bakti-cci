@@ -2,9 +2,25 @@
     --swiper-navigation-size: 30px !important;
 }
 
-.active {
-    font-weight: bold;
-    border-bottom: 3px solid #ffb11f;
+.header {
+  z-index: 11;
+}
+
+.header__link {
+  position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #ffb11f;
+    /* font-weight: bold;
+    border-bottom: 3px solid #ffb11f; */
   }
 
 .home {
@@ -48,6 +64,11 @@
 .section__features,
 .section__prakata {
   position: relative;
+}
+
+.section__visi-box {
+  position: relative;
+  z-index: 9;
 }
 
 .section__intro {

@@ -34,15 +34,24 @@ class ProfileSekolah {
     }
 }
 
-const galeri = [
-    new DataGaleri(uniqueID(), galeri1),
-    new DataGaleri(uniqueID(), galeri2),
-    new DataGaleri(uniqueID(), galeri3),
-    new DataGaleri(uniqueID(), galeri4),
-    new DataGaleri(uniqueID(), dummmy1),
-    new DataGaleri(uniqueID(), dummmy2),
-    new DataGaleri(uniqueID(), dummmy3),
-    new DataGaleri(uniqueID(), dummmy4)
+class dataAktivitas {
+    constructor(id, thumbnail, srcGaleri = []) {
+        this.id = id
+        this.thumbnail = thumbnail
+        this.srcGaleri = srcGaleri
+        this.title = 'Kegiatan Belajar Mengajar'
+        this.desc = 'Kegiatan Belajar Mengajar yang intensif, dengan mengunakan tenaga pengajar yang baik.'
+    }
+}
+
+const galeriAktivitas = [
+    new dataAktivitas(uniqueID(), galeri1, [galeri1, galeri2, galeri3]),
+    new dataAktivitas(uniqueID(), galeri2, [galeri2, galeri1, galeri3]),
+    new dataAktivitas(uniqueID(), galeri3, [galeri3, galeri1, galeri2]),
+    new dataAktivitas(uniqueID(), galeri4, [galeri4, galeri2, galeri3]),
+    new dataAktivitas(uniqueID(), galeri1, [galeri1, galeri3, galeri2]),
+    new dataAktivitas(uniqueID(), galeri2, [galeri2, galeri4, galeri1]),
+    new dataAktivitas(uniqueID(), galeri3, [galeri3, galeri2, galeri4]),
 ]
 
 const profile = [
@@ -66,6 +75,16 @@ const dataPengajar = [
                 tahun: 2015,
                 gelar: 'nominasi guru favorit',
                 deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
+            },
+            {
+                tahun: 2016,
+                gelar: 'nominasi guru berprestasi',
+                deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
+            },
+            {
+                tahun: 2018,
+                gelar: 'nominasi guru nasional',
+                deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
             }
         ]
     },
@@ -82,6 +101,16 @@ const dataPengajar = [
             {
                 tahun: 2015,
                 gelar: 'nominasi guru favorit',
+                deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
+            },
+            {
+                tahun: 2016,
+                gelar: 'nominasi guru berprestasi',
+                deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
+            },
+            {
+                tahun: 2018,
+                gelar: 'nominasi guru nasional',
                 deskripsi: 'Vero vel nesciunt praesentium voluptatibus et voluptatem est.'
             }
         ]
@@ -105,4 +134,4 @@ const dataPengajar = [
     }
 ]
 
-export {galeri, profile, dataPengajar}
+export {galeriAktivitas, profile, dataPengajar}
