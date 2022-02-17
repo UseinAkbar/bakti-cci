@@ -10,13 +10,13 @@ import 'swiper/swiper.min.css';
 // install Swiper components
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
-const GaleriPopUp = ({isPopUp, imgPopUp, titlePopUp, descPopUp, isDisplayDetail, handleDetail}) => {
-    console.log(imgPopUp);
+const GaleriPopUp = ({isPopUp, imgPopUp, detailPopUp, isDisplayDetail, handleDetail}) => {
+    const {title, subTitle, tema, subTema, subSubTema} = detailPopUp
 
     return (
         <div className={`galeri__swiper ${isPopUp && 'popUpSwiper'}`}>
             <Swiper
-                navigation
+                navigation={imgPopUp.length > 1 && true}
                 spaceBetween={10}
                 slidesPerView={1}
                 initialSlide={0}
@@ -28,7 +28,7 @@ const GaleriPopUp = ({isPopUp, imgPopUp, titlePopUp, descPopUp, isDisplayDetail,
                 {imgPopUp.map((item, i) => {
                     return (
                         <SwiperSlide key={i}>
-                            <div className={`galeri__container`}>
+                            <div className='galeri__container'>
                                 <div className='galeri__iconBox' onClick={handleDetail}>
                                     <svg className={`galeri__icon galeri__icon-info ${!isDisplayDetail && 'displayInfo'}`}>
                                         <use xlinkHref={`${icon}#icon-info`}></use>
@@ -38,11 +38,39 @@ const GaleriPopUp = ({isPopUp, imgPopUp, titlePopUp, descPopUp, isDisplayDetail,
                                     </svg>
                                 </div>
                                 <div className='galeri__imgBoxPopUp'>
-                                    <img src={item} alt={descPopUp} className="galeri__imgPopUp" />
-                                    <div className={`galeri__detail ${isDisplayDetail && 'popUpDetail'}`}>
-                                        <h2 className="galeri__title">{titlePopUp}</h2>
-                                        <p className="galeri__desc">{descPopUp}</p>
+                                    <img src={item} alt={subTitle} className="galeri__imgPopUp" />
+                                    {tema ? 
+                                    <div className={`galeri__detail galeri__detail-lengkap ${isDisplayDetail && 'popUpDetail'}`}>
+                                        <div className="galeri__titleBox">
+                                            <h2 className="galeri__title">{title}</h2>
+                                            <p className="galeri__desc">{subTitle}</p>                                         
+                                        </div>
+                                        {/* <div className="galeri__detail-border"></div> */}
+                                        <div className="galeri__temaBox">
+                                            <table>
+                                                <tr>
+                                                    <td>Tema</td>
+                                                    <td>:</td>
+                                                    <td>{tema}</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td>Sub-tema</td>
+                                                    <td>:</td>
+                                                    <td>{subTema}</td>
+                                                </tr>  
+                                                <tr>
+                                                    <td>Sub-sub-tema</td>
+                                                    <td>:</td>
+                                                    <td>{subSubTema}</td>
+                                                </tr>                                                 
+                                            </table>
+                                        </div>
                                     </div>
+                                    : <div className={`galeri__detail ${isDisplayDetail && 'popUpDetail'}`}>
+                                        <h2 className="galeri__title">{title}</h2>
+                                        <p className="galeri__desc">{subTitle}</p>
+                                    </div>
+                                    }       
                                 </div>
                             </div>
                         </SwiperSlide>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import Gallery from '../components/Gallery';
+import GaleriAktivitas from '../components/GaleriAktivitas';
+import GaleriKegiatan from '../components/GaleriKegiatan';
 import GaleriPopUp from '../components/GaleriPopUp';
 import '../css/Home.css';
 import landingImage from "../images/landing.png";
@@ -9,11 +10,6 @@ import moneyImage from "../images/money.png";
 import bookImage from "../images/book.png";
 import kepsekImage from "../images/kepsek.png";
 import paperImage from "../images/paper.png";
-import post1Image from "../images/post/1.png";
-import post2Image from "../images/post/2.png";
-import post3Image from "../images/post/3.png";
-import post4Image from "../images/post/4.png";
-import post5Image from "../images/post/5.png";
 import ellipse1 from "../images/Ellipse1.png";
 import ellipse2 from "../images/Ellipse2.png";
 import ellipse3 from "../images/Ellipse3.png";
@@ -23,36 +19,40 @@ import ellipse6 from "../images/Ellipse6.png";
 import ellipse7 from "../images/Ellipse7.png";
 import E1 from "../images/E1.png";
 import E2 from "../images/E2.png";
-// import B1 from "../images/B1.png";
 
 const Home = () => {
   const [isPopUp, setPopUp] = useState(false)
   const [imgPopUp, setImgPopUp] = useState([])
-  const [titlePopUp, setTitlePopUp] = useState('')
-  const [descPopUp, setDescPopUp] = useState('')
+  const [detailPopUp, setDetailPopUp] = useState({title: '', subTitle: '', tema: '', subTema: '', subSubTema: ''})
   const [isDisplayDetail, setDisplayDetail] = useState(false)
 
   const handleDetail = () => {
     setDisplayDetail(!isDisplayDetail)
   }
 
-  const handlePopUp = (arrGaleri, title, desc) => {
-    console.log(arrGaleri);
+  const handlePopUp = (arrGaleriKelas, title, subTitle, tema = '', subTema = '', subSubTema = '') => {
     setPopUp(!isPopUp)
-    setImgPopUp(arrGaleri)
-    setTitlePopUp(title)
-    setDescPopUp(desc)
+    setImgPopUp(arrGaleriKelas)
+    setDetailPopUp({
+      title,
+      subTitle,
+      tema,
+      subTema,
+      subSubTema
+    })
+    document.body.classList.toggle('fixBody')
   }
 
   const handleClose = () => {
     setDisplayDetail(false)
     setPopUp(!isPopUp)
+    document.body.classList.toggle('fixBody')
   }
 
   return (
     <div className="home font-nunito">
       {/* <img src={B1}  className="absolute" alt=""  /> */}
-      <div className="flex justify-between px-14 pt-24 section__intro">
+      <div className="flex justify-between px-14 pt-20 section__intro">
         <img src={ellipse2} alt="blur" className="blur blur__intro blur__intro--2" />
         <img src={ellipse1} alt="blur" className="blur blur__intro blur__intro--1" />
         <div className="w-3/6 self-center mr-5 intro__heading">
@@ -228,12 +228,11 @@ const Home = () => {
                 Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
               </p>
               <div className="galeri__box">
-                <Gallery handlePopUp={handlePopUp} />
+                <GaleriAktivitas handlePopUp={handlePopUp} />
                 <GaleriPopUp 
                   isPopUp={isPopUp} 
                   imgPopUp={imgPopUp} 
-                  titlePopUp={titlePopUp} 
-                  descPopUp={descPopUp} 
+                  detailPopUp={detailPopUp} 
                   isDisplayDetail={isDisplayDetail}
                   handleDetail={handleDetail}
                   handleClose={handleClose} 
@@ -255,23 +254,11 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-1 place-items-center bg-yellow-700 bg-opacity-20 rounded p-6 mt-5">
-              <div className="row-span-2" >
-                <img src={post1Image} alt="" />
-              </div>
-              <div>
-                <img src={post2Image} alt="" />
-              </div>
-              <div className="w-full h-full">
-                <img src={post4Image} alt="" />
-              </div>
-              <div>
-                <img src={post3Image} alt="" />
-              </div>
-              <div className="w-full h-full">
-                <img src={post5Image} width="494" height="242" alt="" />
-              </div>
-            </div>
+            <GaleriKegiatan handlePopUp={handlePopUp} />
+
+            {/* <div className="grid grid-cols-3 gap-1 place-items-center bg-yellow-700 bg-opacity-20 rounded p-6 mt-5">
+              
+            </div> */}
           </div>
         </div>
       

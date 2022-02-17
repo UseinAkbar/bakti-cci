@@ -38,7 +38,7 @@ const PengajarPopUp = ({riwayatGuru, flipCard, isFlip, isPopUp, handleClose}) =>
                         </div>
                     </div>
 
-                    <div className="card__boxBottom">
+                    <div className={`card__boxBottom ${!isFlip && 'hideBoxBottom'}`}>
                         <h1 className="card__heading">Riwayat Pendidikan</h1>
                         <div className="card__rule"></div>
                         <div className="card__riwayatBox">

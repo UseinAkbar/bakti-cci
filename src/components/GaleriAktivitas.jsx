@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/Galeri.css'
-import { galeriAktivitas } from "../data";
+import galeriKelas from "../gambarKelas.js";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,23 +10,22 @@ import 'swiper/swiper.min.css';
 // install Swiper components
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
-const Gallery = ({handlePopUp}) => {
+const GaleriAktivitas = ({handlePopUp}) => {
 
     return (
         <Swiper
             navigation
             spaceBetween={10}
             slidesPerView={4}
-            freeMode={true}
-            autoplay={{delay: 1900, disableOnInteraction: false}}
+            // autoplay={{delay: 1900, disableOnInteraction: false}}
             loop
             className="galeri__carousel"
         >
-            {galeriAktivitas.map(item => {
-                const {id, thumbnail, srcGaleri, title, desc} = item
+            {galeriKelas.map(item => {
+                const {id, thumbnail, srcGaleri, title, subtitle, tema, subTema, subSubTema} = item
                 return (
                     <SwiperSlide key={id}>
-                        <div className="galeri__imgBox" onClick={() => handlePopUp(srcGaleri, title, desc)}>
+                        <div className="galeri__imgBox" onClick={() => handlePopUp(srcGaleri, title, subtitle, tema, subTema, subSubTema)}>
                             <img src={thumbnail} className="galeri__img" alt="Foto Aktivitas Murid TK 05 TegalAmpel"/>
                         </div>
                     </SwiperSlide>
@@ -36,4 +35,4 @@ const Gallery = ({handlePopUp}) => {
     )
 }
 
-export default Gallery
+export default GaleriAktivitas
