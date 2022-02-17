@@ -93,6 +93,10 @@
     grid-gap: 15px;
 }
 
+.hideBoxBottom {
+    visibility: hidden;
+}
+
 .card__side--back {
     padding: 30px;
     color: #FFFFEA;
@@ -101,28 +105,8 @@
     grid-auto-rows: min-content;
     grid-gap: 15px;
     background-image: linear-gradient(to top right, #5F4D00 40%, #FFB11F 180%);
-    border-radius: 2px;
-    overflow: auto;
+    border-radius: 40px;
     transform: rotateY(-180deg);
-}
-
-.card__side--back:hover::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.card__side--back::-webkit-scrollbar {
-    width: 6px;
-}
-
-.card__side--back::-webkit-scrollbar-track {
-    background-color: transparent;
-    border-radius: 100px;
-}
-
-.card__side--back::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 5px;
-    transform: .8s ease;
 }
 
 .displayBack {
@@ -150,6 +134,28 @@
     grid-gap: 20px;
     font-family: 'Nunito';
     color: #FFFFEA;
+    overflow-y: auto;
+    height: 235px;
+    padding-right: 6px;
+}
+
+.card__riwayatBox:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.card__riwayatBox::-webkit-scrollbar {
+    width: 4px;
+}
+
+.card__riwayatBox::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 100px;
+}
+
+.card__riwayatBox::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    transform: .8s ease;
 }
 
 .card__riwayat {

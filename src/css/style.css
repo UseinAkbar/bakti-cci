@@ -2,12 +2,38 @@
     --swiper-navigation-size: 30px !important;
 }
 
+/* body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background: #d49115; 
+
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #9c6c13; 
+} */
+
+.fixBody {
+  height: 100%;
+  overflow: hidden;
+}
+
 .header {
   z-index: 11;
 }
 
 .header__link {
   position: relative;
+}
+
+.active {
+  font-weight: 700;
 }
 
 .active::after {

@@ -34,17 +34,13 @@ const About = () => {
             cardRiwayat
         })
         setPopUp(!isPopUp)
+        document.body.classList.toggle('fixBody')
     }
 
     const handleClose = () => {
         setPopUp(!isPopUp)
         setTimeout(() => setFlip(false), 300)
-        setTimeout(() => setRiwayatGuru({
-            cardImg: '',
-            cardNama: '',
-            cardJabatan: '',
-            cardRiwayat: []
-        }), 400)
+        document.body.classList.toggle('fixBody')
     }
 
     return (
