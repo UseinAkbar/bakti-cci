@@ -225,7 +225,7 @@ const Home = () => {
             <h1 className="font-raleway text-5xl font-bold">Galeri Foto Aktivitas Siswa</h1>
             <div className="galeri">
               <p className="font-nunito mt-5 font-light">
-                Expedita voluptatibus assumenda iusto eum cumque beatae sunt saepe. Consectetur sed itaque consectetur. 
+              Aktivitas peserta didik berpusat kepada potensi, perkembangan, kebutuhan, kepentingan peserta didik dan lingkungannya. 
               </p>
               <div className="galeri__box">
                 <GaleriAktivitas handlePopUp={handlePopUp} />
@@ -247,10 +247,10 @@ const Home = () => {
       <div className="py-36">
         <div className="flex justify-center ">
           <div className="w-5/6 text-center ">
-            <h1 className="font-raleway text-5xl font-bold">Prestasi Sekolah</h1>
+            <h1 className="font-raleway text-5xl font-bold">Kegiatan Eksternal Sekolah</h1>
             <div className="text-center flex justify-center">
               <p className="w-5/12 font-nunito mt-2 font-light">
-              Expedita voluptatibus assumenda iusto eum cumque beatae sunt.
+              Aktivitas peserta didik berpusat kepada potensi, perkembangan, kebutuhan, kepentingan peserta didik dan lingkungannya.
               </p>
             </div>
 
