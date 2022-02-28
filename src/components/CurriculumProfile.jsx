@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import {thumbnailKurikulum, detailKurikulum} from '../kurikulum.js'
 
-const CurriculumProfile = () => {    
 
+const CurriculumProfile = () => {    
+    
     const thumbHandler = (i) => {
         handleContent(i)
         handleThumb(i)
@@ -14,7 +15,6 @@ const CurriculumProfile = () => {
         if(!kurikulumKonten[i].classList.contains('activeDetail'))
             kurikulumKonten[i].classList.toggle('activeDetail')
             kurikulumKonten.filter(item => item !== kurikulumKonten[i]).forEach(item => item.classList.remove('activeDetail'))
-
     }
 
     const handleThumb = (i) => {
