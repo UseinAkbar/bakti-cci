@@ -106,6 +106,19 @@ const Curriculum = () => {
                     </div>
                 </section>
             </div>
+            <section className="kurikulum bg-yellow-100">
+                <div className="divide-y divide-black">
+                    <div>
+                        <h1 className="font-bold font-raleway text-4xl">Kalender Akademik</h1>
+                    </div>
+                    <div className="my-4"></div>
+                </div>
+                <div className="flex justify-center">
+                    <div>
+                        <iframe title="calendar" src="https://calendar.google.com/calendar/embed?height=800&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FJakarta&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&hl=id&src=dGtwZ3JpMDV0ZWdhbGFtcGVsQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%2333B679&color=%230B8043" style={{borderWidth:0}} width="1200" height="700" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }
