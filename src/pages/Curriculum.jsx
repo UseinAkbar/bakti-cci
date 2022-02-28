@@ -16,11 +16,11 @@ const Curriculum = () => {
                         <div className="w-full overflow-x-auto">
                         <table className="w-full">
                             <thead>
-                            <tr className="text-md font-semibold tracking-wide text-gray-900 bg-yellow-100 text-xl text-center border-gray-600">
-                                <th className="py-7 w-1/4">Nama Kegiatan</th>
-                                <th className="py-7 w-1/4">Alokasi Waktu</th>
-                                <th className="py-7 w-2/4">Keterangan</th>
-                            </tr>
+                                <tr className="text-md font-semibold tracking-wide text-gray-900 bg-yellow-100 text-xl text-center border-gray-600">
+                                    <th className="py-7 w-1/4">Nama Kegiatan</th>
+                                    <th className="py-7 w-1/4">Alokasi Waktu</th>
+                                    <th className="py-7 w-2/4">Keterangan</th>
+                                </tr>
                             </thead>
                             <tbody className="bg-white">
                             <tr className="text-gray-700 ">
@@ -31,7 +31,7 @@ const Curriculum = () => {
                                     Minimum 36 minggu dan Maksimum 38 minggu
                                 </td>
                                 <td className="px-4 py-6 text-base ">
-                                    Digunakan untuk kegiatan pembelajaran efektif pada setiap satuan pendidikan.
+                                    Digunakan untuk kegiatan pembelajaran efektif pada setiap satuan pendidikan
                                 </td>
                             </tr>
                             <tr className="text-gray-700 ">
@@ -53,7 +53,7 @@ const Curriculum = () => {
                                     Maksimum 3 minggu
                                 </td>
                                 <td className="px-4 py-6 text-base ">
-                                    Digunakan untuk penyiapan kegiatan dan administrasi akhir dan awal tahun pelajaran.
+                                    Digunakan untuk penyiapan kegiatan dan administrasi akhir dan awal tahun pelajaran
                                 </td>
                             </tr>
                             <tr className="text-gray-700 ">
@@ -64,7 +64,7 @@ const Curriculum = () => {
                                     2-4 minggu
                                 </td>
                                 <td className="px-4 py-6 text-base ">
-                                    Daerah khusus yang memerlukan libur keagamaan lebih panjang dapat mengaturnya sendiri tanpa mengurangi jumlah minggu efektif belajar dan waktu pembelajaran efektif.
+                                    Daerah khusus yang memerlukan libur keagamaan lebih panjang dapat mengaturnya sendiri tanpa mengurangi jumlah minggu efektif belajar dan waktu pembelajaran efektif
                                 </td>
                             </tr>
                             <tr className="text-gray-700 ">
@@ -75,7 +75,7 @@ const Curriculum = () => {
                                     Maksimum 2 minggu
                                 </td>
                                 <td className="px-4 py-6 text-base ">
-                                    Disesuaikan dengan peraturan pemerintah.
+                                    Disesuaikan dengan peraturan pemerintah
                                 </td>
                             </tr>
                             <tr className="text-gray-700 ">
@@ -86,7 +86,7 @@ const Curriculum = () => {
                                     Maksimum 1 minggu
                                 </td>
                                 <td className="px-4 py-6 text-base ">
-                                    Untuk satuan pendidikan sesuai dengan ciri kekhususan masing masing.
+                                    Untuk satuan pendidikan sesuai dengan ciri kekhususan masing masing
                                 </td>
                             </tr>
                             <tr className="text-gray-700 ">
@@ -109,9 +109,8 @@ const Curriculum = () => {
             <section className="kurikulum bg-yellow-100">
                 <div className="divide-y divide-black">
                     <div>
-                        <h1 className="font-bold font-raleway text-4xl">Kalender Akademik</h1>
+                        <h1 className="font-bold font-raleway text-4xl mb-10">Kalender Akademik</h1>
                     </div>
-                    <div className="my-4"></div>
                 </div>
                 <div className="flex justify-center">
                     <div>
